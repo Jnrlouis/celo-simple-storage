@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Tabs, Tab, Typography, Box } from "@mui/material";
-import deployedContracts from "@local-contracts/deployments/hardhat_contracts.json";
+import deployedContracts from "../../hardhat/deployments/hardhat_contracts.json";
 
 // To use Truffle, Uncomment the below line and comment the hardhat_contracts.json line above
 // import deployedContracts from "@local-truffle/build/contracts/Greeter.json";
