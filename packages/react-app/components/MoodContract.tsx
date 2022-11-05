@@ -6,7 +6,7 @@ import { useCelo } from "@celo/react-celo";
 import { useEffect, useState } from "react";
 import { SnackbarAction, SnackbarKey, useSnackbar } from "notistack";
 import { truncateAddress } from "@/utils";
-import { Mood } from "@local-contracts/types/Mood";
+// import { Mood } from "@local-contracts/types/Mood";
 
 export function MoodContract({ contractData }) {
   const { kit, address, network, performActions } = useCelo();
@@ -19,7 +19,7 @@ export function MoodContract({ contractData }) {
     ? (new kit.connection.web3.eth.Contract(
         contractData.abi,
         contractData.address
-      ) as any as Mood)
+      ) as any)
     : null;
 
   useEffect(() => {

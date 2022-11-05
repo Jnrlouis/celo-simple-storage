@@ -30,7 +30,7 @@ const FadeIcon = React.forwardRef(function Fade({ in: inProp }: { in: boolean },
   const foreignRef = useForkRef(null, ref);
   const handleRef = useForkRef(nodeRef, foreignRef);
 
-  return <Transition nodeRef={nodeRef} in={inProp} timeout={duration}>
+  return <>
     {state => (
       <div ref={handleRef} style={{ display: "inline-block" }}>
         <Icon style={{
@@ -41,7 +41,7 @@ const FadeIcon = React.forwardRef(function Fade({ in: inProp }: { in: boolean },
         </Icon>
       </div>
     )}
-  </Transition>
+  </>
 });
 
 export function Polling() {

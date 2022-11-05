@@ -73,22 +73,22 @@ export function AccountInfo() {
       baseCurrency === BaseCurrency.USD
         ? 1
         : baseCurrency === BaseCurrency.EUR
-          ? 1.0 / eurUsdPrice.value
+          ? 1.0 / eurUsdPrice["value"]
           : baseCurrency === BaseCurrency.ETH
-            ? 1.0 / ethUsdPrice.value
-            : 1.0 / celoUsdPrice.value
+            ? 1.0 / ethUsdPrice["value"]
+            : 1.0 / celoUsdPrice["value"]
     );
 
     setBalance({
       CELO: {
         raw: celoAmount,
-        base: (celoUsdPrice.value * (+celoAmount) * scale),
-        exchange: celoUsdPrice.value * scale
+        base: (celoUsdPrice["value"] * (+celoAmount) * scale),
+        exchange: celoUsdPrice["value"] * scale
       },
       cEUR: {
         raw: ceurAmount,
-        base: (eurUsdPrice.value * (+ceurAmount) * scale),
-        exchange: eurUsdPrice.value * scale
+        base: (eurUsdPrice["value"] * (+ceurAmount) * scale),
+        exchange: eurUsdPrice["value"] * scale
       },
       cUSD: {
         raw: cusdAmount,
